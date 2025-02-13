@@ -110,9 +110,32 @@ const BookForm = () => {
               </FormItem>
             )}
           />
-          <Button className="bg-green-600 hover:bg-green-500 p-5" type="submit">
-            {id ? "Update" : "Add"} Book
-          </Button>
+          <div className="flex justify-between">
+            <Button
+              variant="default"
+              className="p-5"
+              type="button"
+              onClick={() => navigate("/")}
+            >
+              Back
+            </Button>
+            <div className="flex space-x-4">
+              <Button
+                variant="outline"
+                className="p-5"
+                type="button"
+                onClick={() => form.reset()}
+              >
+                Clear
+              </Button>
+              <Button
+                className="bg-green-600 hover:bg-green-500 p-5"
+                type="submit"
+              >
+                {id ? "Update" : "Add"} Book
+              </Button>
+            </div>
+          </div>
         </form>
       </Form>
     </div>
